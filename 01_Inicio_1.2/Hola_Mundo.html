@@ -9,11 +9,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Include scripts -->
         <script src="../node_modules/angular/angular.min.js"></script>
+        <script src="./apps.js"></script>
 
         
     </head>
     
-    <body ng-app ng-init="sName='Pepe'; sCurso='Angular JS';" class="ng-scope">
+    <body ng-app="appModule" ng-controller="AppController as vn"> <!-- AppController funcion constructora que va a iniciar el controller -->
         
         <header>
             <h1>Hola Mundo</h1>
@@ -22,21 +23,21 @@
         <article>
             <p>
                 <label for="name">Di tu nombre: </label>
-                <input id="name" type="text" ng-model="sName">
+                <input id="name" type="text" ng-model="vn.sName">
             </p>
 
             <p>
-                <button ng-click="sName='';">Borrar</button>
+                <button ng-click="vn.btnBorrar()">Borrar</button>
             </p>
             
             <p>
-                Hola {{sName}}
+                Hola {{vn.sName}}
             </p>
         </article>
 
 
         <footer>
-            <p>Curso de {{sCurso}}</p>
+            <p>Curso de {{vn.sCurso}}</p>
         </footer>
     
     </body>
