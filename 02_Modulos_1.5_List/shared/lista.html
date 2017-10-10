@@ -1,0 +1,17 @@
+<article>
+    <p>
+        <label for="name">Di tu nombre: </label>
+        <input id="name" type="text" ng-model="$ctrl.sName">
+    </p>
+        
+    <p>
+        <button ng-click="$ctrl.btnBorrar()">Borrar</button>
+    </p> 
+    
+    <p>
+        <button ng-click="$ctrl.btnAnadir()">Añadir</button>
+    </p> 
+    <ul>
+        <li ng-repeat="name in $ctrl.sListNames | filter: 'Antonio' track by $index ">{{name}}</li>
+    </ul>
+</article>

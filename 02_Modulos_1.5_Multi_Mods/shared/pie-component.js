@@ -25,6 +25,6 @@ angular.module('sharedModule')
                 </footer>
             `,
             //templateUrl: 'templateUrl',
-            controller: PieController,
+            controller: PieController
             //controllerAs: '$ctrl'
         });

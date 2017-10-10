@@ -1,10 +1,10 @@
 // Componente = Vista(Template) + Controller (Clase)
-class CabezaController{
+class PieController{
     constructor(){
     }
 
     $onInit() { 
-        this.sTitulo = 'Hola Mundo';
+        this.sEmpresa = 'Indra S.L. Badajoz';
     };
 
     //    $onChanges() {         
@@ -15,16 +15,16 @@ class CabezaController{
 }
 
 
-angular.module("sharedModule")
+angular.module('sharedModule')
         // Nombre de la clase - Se u
-        .component('appCabeza', {
+        .component('appPie', {
             // Se puede meter Templates Strings ó con una url a un fichero con el mismo contenido que la strigng
             template:`
-                <header>
-                    <h1> {{$ctrl.sTitulo | uppercase}} </h1>
-                </header>
+                <footer>
+                    <p>Empresa {{$ctrl.sEmpresa}}</p>
+                </footer>
             `,
             //templateUrl: 'templateUrl',
-            controller: CabezaController
+            controller: PieController
             //controllerAs: '$ctrl'
         });

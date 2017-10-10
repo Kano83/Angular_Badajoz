@@ -11,7 +11,7 @@ class SaludoController{
 }   
     
 angular
-.module("appModule",[])
+.module("appModule")
     .component('appSaludo', {
         templateUrl: './main/saludo-partial.html',
         controller: SaludoController

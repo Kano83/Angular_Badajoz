@@ -4,7 +4,7 @@ class CabezaController{
     }
 
     $onInit() { 
-        this.sTitulo = 'Hola Mundo';
+        this.sTitulo = 'Curso de Angular';
     };
 
     //    $onChanges() {         
