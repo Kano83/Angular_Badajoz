@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hola Mundo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Include scripts -->
+        <script src="../node_modules/angular/angular.min.js"></script>
+
+        <!-- Modulos -->
+        <script src="./apps.js"></script>
+        <script src="./shared/shared.js"></script>
+
+        <!-- Component -->
+        <script src="./main/main-component.js"></script>
+        <script src="./main/saludo-component.js"></script>
+        <script src="./shared/cabeza-component.js"></script>
+        <script src="./shared/pie-component.js"></script>
+    </head>
+    
+    <body ng-app="appModule">
+        <app-main>Cargando</app-main>
+    </body>
+</html>
