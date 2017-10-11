@@ -1,0 +1,15 @@
+<form>
+    <p>
+        <label>SELECCIÓN DE PROVINCIAS</label>
+    </p>
+        <label for="select" >Elija una privincia, por favor: </label>
+        <select id="select" ng-model="$ctrl.oProvinciaSeleccionada" ng-options="provincia as provincia.nombre for provincia in $ctrl.aProvincias track by provincia.id" 
+            ng-change="$ctrl.sNombProvSelec = $ctrl.oProvinciaSeleccionada.nombre"> 
+            <option value="">--Elige opcion--</option>            
+        </select>	
+        
+        <p>	
+            <label>La provincia seleccionada es: {{$ctrl.sNombProvSelec}}</label>        
+        </p>
+
+</form>

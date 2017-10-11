@@ -1,0 +1,42 @@
+<form name="myform" novalidate ng-submit="$ctrl.enviarDatos()">
+        <p><label>VALIDACIONES</label></p>
+        <p>	
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" name="name" ng-model="$ctrl.sName" ng-required="true" ng-minlength="5" ng-maxlength="50" ng-model-options="{updateOn: 'blur'}">
+        </p>
+        <span class="error-message" ng-show="myform.name.$dirty && myform.name.$error.required">El nombre es obligatorio</span>
+        <span class="error-message" ng-show="myform.name.$error.minlength || myform.name.$error.maxlength ">El telefono no tiene la longitud correcta</span>
+
+        <p>	
+            <label for="ape">Apellidos: </label>
+            <input type="text" name="ape" id="ape"  ng-model="$ctrl.sSurname"  ng-required="true" ng-minlength="10" ng-maxlength="100" ng-model-options=" {updateOn: 'blur'}" >
+        </p>
+        <span class="error-message" ng-show="myform.ape.$dirty && myform.ape.$error.required">El apellido es obligatorio</span>
+        <span class="error-message" ng-show="myform.ape.$error.minlength || myform.ape.$error.maxlength ">El telefono no tiene la longitud correcta</span>
+        
+        <p>	
+            <label for="tlfn">Número de telefono</label>
+            <input type="text" id="tlfn" name="tel" ng-model="$ctrl.sTelephone"  ng-required="true" ng-minlength="9" ng-maxlength="9" ng-pattern="/^\d{9}$/" ng-model-options=" {updateOn: 'blur'}" >
+        </p>
+        <span class="error-message" ng-show="myform.tel.$dirty && myform.tel.$error.required">El telefono es obligatorio</span>
+        <span class="error-message" ng-show="myform.tel.$error.minlength || myform.tel.$error.maxlength ">El telefono no tiene la longitud correcta</span>
+        <span class="error-message" ng-show="myform.tel.$error.pattern">Solo pueden utilizarse caracteres numericos</span>
+        <p>
+            <button type="submit" ng-disabled="!myform.$valid">Enviar</button>
+        </p>
+
+</form>
+
+<div ng-if="$ctrl.isSubmit">
+        <p>	
+            <label for="name">Nombre: {{$ctrl.sName}}</label>
+           
+        </p>
+
+        <p>	
+            <label for="ape">Apellidos: {{$ctrl.sSurname}}</label>
+        </p>
+        <p>	
+            <label for="tlfn">Número de telefono: {{$ctrl.sTelephone}}</label>
+        </p>
+</div>
