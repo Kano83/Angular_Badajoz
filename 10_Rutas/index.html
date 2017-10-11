@@ -1,0 +1,53 @@
+<!-- Ejemplo de AngularJS;
+	Componentes en Angular 1.5/1.6
+    Se refactorizan las directivas cabecera y pie como componentes
+
+    Se crean dos componentes :
+        - con estado: add-Texto. Tiene su propio scope totalmemte aislado, 
+          en el que se almacenan los resultados de la interacción con el usuario (el estado)
+        - sin estado : dos-botones. Para que este totalmente desacoplado hay que
+         pasarle tanto los strings como las funciones que necesita utilizar
+    ... -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Componentes</title>	
+        <meta charset="UTF-8">
+        <meta name="description" content="Ejercicios de AngularJS">
+        <meta name="author" content="Alejandro Cerezo">  	
+        <meta name="generator" content="Visual Studio Code">
+        <base href="/10_Rutas/"></base>
+
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">		
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/default.css">
+        
+        <script src="../node_modules/angular/angular.min.js"></script>
+        <script src="../node_modules/angular-i18n/angular-locale_es-es.js"></script>
+        
+        <script src="js/app.js"></script>
+        <script src="js/about-controller.js"></script>
+        <script src="js/home-controller.js"></script>
+
+        <script src="../node_modules/angular-route/angular-route.js"></script>
+
+    </head>
+
+    <body ng-app="appPrueba">
+        <article>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/about">Acerca de</a></li>
+                </ul>
+            </nav>
+            <p ng-view></p>
+            </article>
+        </div>
+
+    </body>
+</html>
+
+
