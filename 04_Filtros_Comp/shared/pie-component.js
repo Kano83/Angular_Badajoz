@@ -2,7 +2,7 @@
 class PieController {
 
     $onInit () {
-        this.sFormador = "Alejandro Cerezo"
+        this.sFormador = "Ángel Broncano"
         this.sEmpresa='Indra';
         this.sLugar = "Badajoz"
         this.fecha = new Date();

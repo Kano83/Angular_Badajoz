@@ -1,14 +1,22 @@
 class ListaController {
     
+    constructor($log){
+        'ngInject';
+        this.$log = $log;
+    }
+
     $onInit () {
         this.sName='';
         this.sNombsSurnameProvSelec = '';
         this.sTelephone = '';
         this.isSubmit = false;
+
     }
     
     enviarDatos(){
+        this.$log.info('Enviando datos' + this);
         this.isSubmit = true;
+
     }
     
 }
